@@ -1,0 +1,75 @@
+.projects-page {
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+.projects-header {
+  text-align: center;
+  padding: 3rem 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects-header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #f7ba2b 0%, #ea5358 50%, #667eea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease;
+}
+
+.projects-header p {
+  font-size: 1.4rem;
+  color: #ccc;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Light mode adjustments */
+.light-mode .projects-header p {
+  color: #555;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-header h1 {
+    font-size: 3rem;
+  }
+  
+  .projects-header p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .projects-header p {
+    font-size: 1rem;
+  }
+}

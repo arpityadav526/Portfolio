@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  gap: 2rem;
+  transition: background 0.5s ease;
+}
+
+/* Light mode navbar */
+.light-mode nav {
+  background: linear-gradient(135deg, #a8b8ff 0%, #c9a9e9 100%);
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+nav ul li a {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
