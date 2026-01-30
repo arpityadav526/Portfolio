@@ -1,14 +1,8 @@
 .app-container {
+  position: relative;
   min-height: 100vh;
-  background-image: url('/Users/arpityadav526/Desktop/Digital_PORTFOLIO/portfolio_front/public/images/hero/DAVID GOGGINS MOTIVATIONAL WALLPAPER.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-.app-container {
-  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 120px;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
@@ -22,4 +16,18 @@
 .app-container.light-mode {
   background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
   color: #000000;
+}
+
+/* DotGrid as global background */
+.app-dot-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure app content stays above background */
+.app-container > *:not(.app-dot-background) {
+  position: relative;
+  z-index: 1;
 }

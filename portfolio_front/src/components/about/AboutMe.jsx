@@ -4,7 +4,7 @@ function AboutMe() {
       <div className="about-header">
         <div className="profile-section">
           <div className="profile-image">
-            <img src="/images/profile.jpg" alt="Profile" />
+            <img src="/images/hero/WhatsApp Image 2026-01-30 at 20.34.13.jpeg" alt="Profile" />
           </div>
           <div className="profile-info">
             <h1>About Me</h1>

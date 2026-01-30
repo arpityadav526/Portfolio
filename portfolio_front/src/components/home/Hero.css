@@ -116,3 +116,124 @@
     transform: translateY(0);
   }
 }
+
+/* Reveal Text Effect */
+.reveal-text {
+  position: relative;
+  display: inline-block;
+  cursor: none;
+}
+
+.reveal-text .placeholder-text,
+.reveal-text .actual-text {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-text .placeholder-text {
+  color: #ffd700;
+  opacity: 1;
+  display: inline-block;
+}
+
+.reveal-text .actual-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: #00d4ff; /* Changed to cyan */
+  display: inline-block;
+  text-shadow: 
+    0 0 10px #00d4ff,
+    0 0 20px #00d4ff,
+    0 0 30px #00d4ff,
+    0 0 40px #00d4ff;
+  white-space: nowrap;
+}
+/* When revealed */
+.reveal-text.revealed .placeholder-text {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.reveal-text.revealed .actual-text {
+  opacity: 1;
+  transform: scale(1.1);
+  animation: revealGlitch 0.6s ease-out forwards;
+}
+/* One-time glitch animation */
+@keyframes revealGlitch {
+  0% {
+    opacity: 0;
+    text-shadow: 
+      0 0 10px #00d4ff,
+      0 0 20px #00d4ff;
+    transform: translate(0) scale(0.8);
+  }
+  10% {
+    opacity: 1;
+    text-shadow: 
+      0 0 15px #00d4ff,
+      0 0 25px #00d4ff,
+      0 0 35px #00d4ff,
+      2px 2px 0 #00d4ff,
+      -2px -2px 0 #0af;
+    transform: translate(-3px, 3px) scale(1.05);
+  }
+  20% {
+    text-shadow: 
+      0 0 20px #00d4ff,
+      0 0 30px #00d4ff,
+      0 0 40px #00d4ff,
+      -2px 2px 0 #00d4ff,
+      2px -2px 0 #0af;
+    transform: translate(3px, -3px) scale(1.15);
+  }
+  30% {
+    text-shadow: 
+      0 0 15px #00d4ff,
+      0 0 25px #00d4ff,
+      0 0 35px #00d4ff,
+      2px -2px 0 #00d4ff,
+      -2px 2px 0 #0af;
+    transform: translate(-2px, -2px) scale(1.08);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #00d4ff,
+      0 0 30px #00d4ff,
+      0 0 40px #00d4ff,
+      -2px -2px 0 #00d4ff,
+      2px 2px 0 #0af;
+    transform: translate(2px, 2px) scale(1.12);
+  }
+  70% {
+    text-shadow: 
+      0 0 15px #00d4ff,
+      0 0 25px #00d4ff,
+      0 0 35px #00d4ff;
+    transform: translate(-1px, 1px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 10px #00d4ff,
+      0 0 20px #00d4ff,
+      0 0 30px #00d4ff,
+      0 0 40px #00d4ff;
+    transform: translate(0) scale(1.1);
+  }
+}
+
+/* Light mode - same color works! */
+.light-mode .reveal-text .placeholder-text {
+  color: #ff6b6b;
+}
+
+.light-mode .reveal-text .actual-text {
+  color: #00d4ff;
+  text-shadow: 
+    0 0 10px #00d4ff,
+    0 0 20px #00d4ff,
+    0 0 30px #00d4ff,
+    0 0 40px #00d4ff;
+}
