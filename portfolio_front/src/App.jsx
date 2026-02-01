@@ -21,34 +21,43 @@ function App() {
   }
 
   const navItems = [
-    {
-      label: "About",
-      bgColor: darkMode ? "#0D0716" : "#e8d5ff",
-      textColor: darkMode ? "#fff" : "#000",
-      links: [
-        { label: "My Story", href: "/about", ariaLabel: "About Me" },
-        { label: "Skills", href: "/about", ariaLabel: "My Skills" }
-      ]
-    },
-    {
-      label: "Projects",
-      bgColor: darkMode ? "#170D27" : "#d4c5e8",
-      textColor: darkMode ? "#fff" : "#000",
-      links: [
-        { label: "All Projects", href: "/projects", ariaLabel: "View All Projects" },
-        { label: "Featured", href: "/projects", ariaLabel: "Featured Projects" }
-      ]
-    },
-    {
-      label: "Contact",
-      bgColor: darkMode ? "#271E37" : "#c0b5d4",
-      textColor: darkMode ? "#fff" : "#000",
-      links: [
-        { label: "Get In Touch", href: "/contact", ariaLabel: "Contact Form" },
-        { label: "Email", href: "/contact", ariaLabel: "Email Me" }
-      ]
-    }
-  ]
+  {
+    label: "Home",
+    bgColor: darkMode ? "#1a0d2e" : "#f0e8ff",
+    textColor: darkMode ? "#fff" : "#000",
+    links: [
+      { label: "Welcome", href: "/", ariaLabel: "Home Page" },
+      { label: "Portfolio", href: "/", ariaLabel: "My Portfolio" }
+    ]
+  },
+  {
+    label: "About",
+    bgColor: darkMode ? "#0D0716" : "#e8d5ff",
+    textColor: darkMode ? "#fff" : "#000",
+    links: [
+      { label: "My Story", href: "/about", ariaLabel: "About Me" },
+      { label: "Skills", href: "/about", ariaLabel: "My Skills" }
+    ]
+  },
+  {
+    label: "Projects", 
+    bgColor: darkMode ? "#170D27" : "#d4c5e8",
+    textColor: darkMode ? "#fff" : "#000",
+    links: [
+      { label: "All Projects", href: "/projects", ariaLabel: "View All Projects" },
+      { label: "Featured", href: "/projects", ariaLabel: "Featured Projects" }
+    ]
+  },
+  {
+    label: "Contact",
+    bgColor: darkMode ? "#271E37" : "#c0b5d4",
+    textColor: darkMode ? "#fff" : "#000",
+    links: [
+      { label: "Get In Touch", href: "/contact", ariaLabel: "Contact Form" },
+      { label: "Email", href: "/contact", ariaLabel: "Email Me" }
+    ]
+  }
+]
 
   return (
     <div className={`app-container ${darkMode ? 'dark-mode' : 'light-mode'}`}>

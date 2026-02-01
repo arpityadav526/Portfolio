@@ -23,7 +23,7 @@ const CardNav = ({
 
   const calculateHeight = () => {
     const navEl = navRef.current;
-    if (!navEl) return 260;
+    if (!navEl) return 320; // Increased for 4 cards
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
@@ -53,7 +53,7 @@ const CardNav = ({
         return topBar + contentHeight + padding;
       }
     }
-    return 260;
+    return 320; // Increased for 4 cards in 2x2 grid
   };
 
   const createTimeline = () => {
@@ -163,7 +163,7 @@ const CardNav = ({
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
-          {(items || []).slice(0, 3).map((item, idx) => (
+          {(items || []).slice(0, 4).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
               className="nav-card"
@@ -172,18 +172,18 @@ const CardNav = ({
             >
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
-  {item.links?.map((lnk, i) => (
-    <Link 
-      key={`${lnk.label}-${i}`} 
-      className="nav-card-link" 
-      to={lnk.href} 
-      aria-label={lnk.ariaLabel}
-    >
-      <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
-      {lnk.label}
-    </Link>
-  ))}
-</div>
+                {item.links?.map((lnk, i) => (
+                  <Link 
+                    key={`${lnk.label}-${i}`} 
+                    className="nav-card-link" 
+                    to={lnk.href} 
+                    aria-label={lnk.ariaLabel}
+                  >
+                    <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
+                    {lnk.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           ))}
         </div>

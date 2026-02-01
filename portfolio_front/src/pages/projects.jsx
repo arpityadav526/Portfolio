@@ -1,7 +1,7 @@
 import { projects } from '../data/projects'
 import ProjectGrid from '../components/projects/ProjectGrid'
-import './Projects.css'
-
+import SocialButtons from '../components/common/SocialButtons'
+import './projects.css'
 
 function Projects() {
   return (
@@ -11,6 +11,7 @@ function Projects() {
         <p>Check out some of my recent work</p>
       </div>
       <ProjectGrid projects={projects} />
+      <SocialButtons />
     </div>
   )
 }
