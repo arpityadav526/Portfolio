@@ -23,7 +23,7 @@ const CardNav = ({
 
   const calculateHeight = () => {
     const navEl = navRef.current;
-    if (!navEl) return 320; // Increased for 4 cards
+    if (!navEl) return 320;
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
@@ -53,7 +53,7 @@ const CardNav = ({
         return topBar + contentHeight + padding;
       }
     }
-    return 320; // Increased for 4 cards in 2x2 grid
+    return 320;
   };
 
   const createTimeline = () => {
@@ -153,13 +153,21 @@ const CardNav = ({
             <img src={logo} alt={logoAlt} className="logo" />
           </div>
 
-          <button
-            type="button"
-            className="card-nav-cta-button"
-            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
-          >
-            Get Started
-          </button>
+          
+          <a
+  href="/assets/resume.pdf"
+  download
+  className="card-nav-cta-button"
+  style={{
+    backgroundColor: buttonBgColor,
+    color: buttonTextColor,
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none'
+  }}
+>
+  Resume
+</a>
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
