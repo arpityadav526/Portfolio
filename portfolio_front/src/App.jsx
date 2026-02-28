@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
 import CardNav from './components/common/CardNav'
-import Crosshair from './components/common/Crosshair'
+
 import ThemeToggle from './components/common/ThemeToggle'
 import DotGrid from './components/common/DotGrid'
 
@@ -73,8 +73,6 @@ function App() {
   bulgeStrength={30}
 />
 
-      {/* Custom Crosshair Cursor */}
-      <Crosshair color={darkMode ? '#ffffff' : '#000000'} />
 
       <BrowserRouter>
   <CardNav
