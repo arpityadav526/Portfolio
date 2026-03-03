@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
 import CardNav from './components/common/CardNav'
@@ -74,9 +74,9 @@ function App() {
 />
 
 
-      <BrowserRouter basename="/portfolio_front">
+      <HashRouter basename="/portfolio_front">
   <CardNav
-    logo="/images/icons/cute-squirrel-logo-continuous-line-vector-24234455.avif"
+    logo="./images/icons/cute-squirrel-logo-continuous-line-vector-24234455.avif"
     logoAlt="Portfolio Logo"
     items={navItems}
     baseColor={darkMode ? '#1a1a1a' : '#ffffff'}
@@ -103,7 +103,7 @@ function App() {
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
   </Routes>
-</BrowserRouter>
+</HashRouter>
     </div>
   )
 }
