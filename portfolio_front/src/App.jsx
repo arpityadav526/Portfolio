@@ -74,7 +74,7 @@ function App() {
 />
 
 
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio_front">
   <CardNav
     logo="/images/icons/cute-squirrel-logo-continuous-line-vector-24234455.avif"
     logoAlt="Portfolio Logo"
